@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregunta 4</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #e8f5e9;
+    }
+    .card {
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px auto;
+      width: 300px;
+      background-color: #43a047;
+      color: white;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #2e7d32;
+    }
+    #timer {
+      font-size: 20px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>¿Qué función realiza un auxiliar sociosanitario?</h2>
+  <a href="ganaste.html" class="card">Apoyar a personas dependientes en sus actividades básicas</a>
+  <a href="incorrecto.html" class="card">Realizar intervenciones quirúrgicas</a>
+  <a href="incorrecto.html" class="card">Administrar justicia en tribunales</a>
+  <a href="incorrecto.html" class="card">Evaluar rendimientos académicos</a>
+  <div id="timer">30</div>
+
+  <script>
+    let time = 30;
+    const timerElement = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      time--;
+      timerElement.textContent = time;
+      if (time <= 0) {
+        clearInterval(countdown);
+        window.location.href = "incorrecto.html";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregunta 2</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #fff3e0;
+    }
+    .card {
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px auto;
+      width: 300px;
+      background-color: #fb8c00;
+      color: white;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #ef6c00;
+    }
+    #timer {
+      font-size: 20px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>¿Cuál es una función básica del tratamiento de datos en un entorno administrativo?</h2>
+  <a href="pregunta3.html" class="card">Organizar y clasificar documentos y registros</a>
+  <a href="incorrecto.html" class="card">Prescribir tratamientos médicos</a>
+  <a href="incorrecto.html" class="card">Reparar sistemas informáticos</a>
+  <a href="incorrecto.html" class="card">Diseñar redes de comunicación</a>
+  <div id="timer">30</div>
+
+  <script>
+    let time = 30;
+    const timerElement = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      time--;
+      timerElement.textContent = time;
+      if (time <= 0) {
+        clearInterval(countdown);
+        window.location.href = "incorrecto.html";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pregunta 3</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #fce4ec;
+    }
+    .card {
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px auto;
+      width: 300px;
+      background-color: #d81b60;
+      color: white;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #ad1457;
+    }
+    #timer {
+      font-size: 20px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>¿Qué es una necesidad educativa especial?</h2>
+  <a href="pregunta4.html" class="card">Una necesidad adicional de apoyo en el aprendizaje</a>
+  <a href="incorrecto.html" class="card">Un problema exclusivo de conducta</a>
+  <a href="incorrecto.html" class="card">Una discapacidad física leve</a>
+  <a href="incorrecto.html" class="card">Una preferencia por trabajar solo</a>
+  <div id="timer">30</div>
+
+  <script>
+    let time = 30;
+    const timerElement = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      time--;
+      timerElement.textContent = time;
+      if (time <= 0) {
+        clearInterval(countdown);
+        window.location.href = "incorrecto.html";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

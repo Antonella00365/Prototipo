@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Respuesta Incorrecta</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f8d7da;
+      color: #721c24;
+      animation: fadeIn 1s ease-in-out;
+    }
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #721c24;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: transform 0.3s ease;
+    }
+    a.button:hover {
+      transform: scale(1.1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Respuesta Incorrecta!</h1>
+  <p>Inténtalo de nuevo.</p>
+  <a href="javascript:history.back()" class="button">Volver a intentar</a>
+</body>
+</html>
